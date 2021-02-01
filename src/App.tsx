@@ -18,7 +18,7 @@ const App: FC = () => {
 
   return (
     <div className="has-text-centered">
-      <Search title="Enter city name and press search button" />
+      <Search title="Search weather" />
       {loading ? (
         <h2 className="is-size-3 py-2">Loading...</h2>
       ) : (
