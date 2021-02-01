@@ -6,14 +6,14 @@ import weatherReducer from "./reducers/WeatherReducer";
 import alertReducer from "./reducers/alertReducer";
 
 const rootReducer = combineReducers({
-    weather: weatherReducer,
-    alert: alertReducer
-})
+  weather: weatherReducer,
+  alert: alertReducer,
+});
 const store = createStore(
-    rootReducer,
-    composeWithDevTools(applyMiddleware(thunk))
-)
+  rootReducer,
+  composeWithDevTools(applyMiddleware(thunk))
+);
 
 export type RootState = ReturnType<typeof rootReducer>;
 
-export defaul store
+export default store;

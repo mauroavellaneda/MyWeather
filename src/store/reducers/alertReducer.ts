@@ -1,3 +1,5 @@
+import { AlertState, AlertAction, SET_ALERT } from "../types";
+
 const initialState: AlertState = {
   message: "",
 };

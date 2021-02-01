@@ -1,20 +1,22 @@
-export const GET_WEATHER = "SET_WEATHER";
-export const GET_LOADING = "SET_LOADING";
-export const GET_ERROR = "SET_ERROR";
-export const GET_ALERT = "SET_ALERT";
+export const GET_WEATHER = "GET_WEATHER";
+export const SET_LOADING = "SET_LOADING";
+export const SET_ERROR = "SET_ERROR";
+export const SET_ALERT = "SET_ALERT";
 
 export interface Weather {
-  description: String;
-  icon: String;
+  description: string;
+  icon: string;
   id: number;
-  main: String;
+  main: string;
 }
+
 export interface WeatherData {
   base: string;
   clouds: {
     all: number;
   };
-  cod: {
+  cod: number;
+  coord: {
     lon: number;
     lat: number;
   };
@@ -44,26 +46,32 @@ export interface WeatherData {
     deg: number;
   };
 }
+
 export interface WeatherError {
   cod: string;
-  message: String;
+  message: string;
 }
+
 export interface WeatherState {
   data: WeatherData | null;
   loading: boolean;
   error: string;
 }
+
 interface GetWeatherAction {
   type: typeof GET_WEATHER;
   payload: WeatherData;
 }
+
 interface SetLoadingAction {
   type: typeof SET_LOADING;
 }
+
 interface SetErrorAction {
   type: typeof SET_ERROR;
   payload: string;
 }
+
 export type WeatherAction =
   | GetWeatherAction
   | SetLoadingAction
@@ -73,6 +81,7 @@ export interface AlertAction {
   type: typeof SET_ALERT;
   payload: string;
 }
+
 export interface AlertState {
   message: string;
 }
