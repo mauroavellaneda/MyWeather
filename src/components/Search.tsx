@@ -26,7 +26,7 @@ const Search: FC<SearchProps> = ({ title }) => {
   };
 
   return (
-    <div className="hero is-light has-text-centered">
+    <div className="hero is-info has-text-centered">
       <div className="hero-body">
         <div className="container">
           <h1 className="title">{title}</h1>
@@ -40,7 +40,7 @@ const Search: FC<SearchProps> = ({ title }) => {
               onChange={changeHandler}
             />
             <button
-              className="button is-primary is-fullwidth"
+              className="button is-warning is-fullwidth"
               style={{ maxWidth: 300, margin: "0 auto" }}
             >
               Search
